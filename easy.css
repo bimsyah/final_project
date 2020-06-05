@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Acme', sans-serif;
+    margin: 0;
+    background-color: paleturquoise;
+}
+h1,h2 {
+    font-size: 60px;
+    text-align: center;
+    margin: 10px;
+}
+
+button {
+    display: block;
+    margin: auto;
+    width: 100px;
+    height: 50px;
+    
+}
+
+.container {
+    width: 600px;
+    margin: auto;
+    cursor: url(/tepok2.png), auto;
+    background-color: teal;
+}
+
+.tongsampah {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    float: left;
+    
+}
+
+.tongsampah::after {
+    content: '';
+    display: block;
+    width: 200px;
+    height: 100px;
+    background: url(/trash.png) bottom center no-repeat ;
+    background-size: 50%;
+    position: absolute;
+    bottom: 0;
+
+}
+
+.lalat {
+    width: 100%;
+    height: 100%;
+    background: url(/fly.png) bottom center no-repeat;
+    background-size: 35%;
+    position: absolute;
+    top: 100px;
+    transition: top 0.3s;
+
+}
+
+.tongsampah.muncul .lalat {
+    top: -85px;
+}
